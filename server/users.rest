@@ -1,0 +1,25 @@
+### POST - register usera
+
+POST http://localhost:3000/api/user/register HTTP/1.1
+content-type: application/json
+
+{
+   "name": "Anna",
+   "lastName": "Nowak",
+   "email":"mlewy@gmail.com",
+   "password":"haslo"
+}
+
+### POST - logowanie z odesłaniem tokena po zalogowaniu - od tej pory każde żądanie zasobów ma zawierać token
+
+POST http://localhost:3000/api/user/login HTTP/1.1
+content-type: application/json
+
+{
+  "email":"mpudzian@gmail.com",
+  "password":"Qwerty123!"
+}
+
+### GET - get json all users - funkcja pomocnicza dla testów zarejestrowanych userów
+GET http://localhost:3000/api/user HTTP/1.1
+

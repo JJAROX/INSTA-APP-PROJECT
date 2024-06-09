@@ -1,0 +1,17 @@
+### GET - pobierz dane danego zdjęcia
+GET http://localhost:3000//api/filters/metadata/1717672446098 HTTP/1.1
+
+### PATCH - użycie konkretnego filtra
+PATCH http://localhost:3000/api/filters HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1717969245328,
+  "lastChange":"negate"
+}
+
+### GET - pobierz zdjęcie wg jego id
+GET http://localhost:3000//api/getimage/1717868334253 HTTP/1.1
+
+### GET - pobierz zdjęcie wg jego id
+GET http://localhost:3000//api/getimage/1717672446098/filter/negate HTTP/1.1

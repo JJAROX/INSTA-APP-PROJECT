@@ -1,0 +1,3 @@
+### GET - pobierz dane danego zdjęcia
+GET http://localhost:3000/uploads/profile HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcxNzg1NDIyNTk5MSwibmFtZSI6IkFtZW4iLCJsYXN0TmFtZSI6IkFtZW4iLCJlbWFpbCI6Im1wdWR6aWFuQGdtYWlsLmNvbSIsImlhdCI6MTcxNzg2MzAxOSwiZXhwIjoxNzE3ODY2NjE5fQ.10qHKYG9GTyc_wH-Kp_b5FqOX4an36uPiQdNaiqdJb4

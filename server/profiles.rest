@@ -1,0 +1,34 @@
+### GET - pobranie danych usera do wyświetlenia w profilu
+GET http://localhost:3000/api/profile HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcxNzY2Nzk0NjI3NywibmFtZSI6Ik1lZ2FuIiwibGFzdE5hbWUiOiJGb3giLCJlbWFpbCI6ImFubmFub3dha0BnbWFpbC5jb20iLCJpYXQiOjE3MTc2NzQxOTgsImV4cCI6MTcxNzY3NDI1OH0.d1nEBqsCibSUUSQIIdwH7_qF3tfGeyGdfIpLawx-raw
+
+### GET - pobranie zdjęcia profilowego usera
+GET http://localhost:3000/api/profile/picture HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcxNzg1NDIyNTk5MSwibmFtZSI6Ik1hcml1c3oiLCJsYXN0TmFtZSI6IlB1ZHppYW5vd3NraSIsImVtYWlsIjoibXB1ZHppYW5AZ21haWwuY29tIiwiaWF0IjoxNzE3ODc0NDgzLCJleHAiOjE3MTc4NzgwODN9.xmD3eGP7k5JKhdiSg4WREYGA-mDPeOOkuNe3A9KLIfw
+
+### PATCH - aktualizacja danych usera w jego profilu
+PATCH http://localhost:3000/api/profile HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcxNzY2Nzk0NjI3NywibmFtZSI6Ik1lZ2FuIiwibGFzdE5hbWUiOiJGb3giLCJlbWFpbCI6ImFubmFub3dha0BnbWFpbC5jb20iLCJpYXQiOjE3MTc2NzQ1ODAsImV4cCI6MTcxNzY3NDY0MH0.R1ZQm0C7pFxwosVjaBo1J8ZhgiuX1Yl5QSHVNmTMZLg
+content-type: application/json
+
+{
+  "name": "Megan",
+  "lastname": "Dirk"
+}
+
+### POST - wysłanie zdjęcia profilowego
+POST http://localhost:3000/api/profile HTTP/1.1
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcxNzg4MjUzOTAxMywibmFtZSI6Ikpha3ViIiwibGFzdE5hbWUiOiJTdGFuZWsiLCJlbWFpbCI6Imt1cndhQGdtYWlsLmNvbSIsImlhdCI6MTcxNzkyNzgwNywiZXhwIjoxNzE3OTMxNDA3fQ.FjgmAoo0jT5viJ4jUWFoK-5-FgpUNcAeieb10ZGLLoU
+Content-Type: multipart/form-data; boundary=----FormBoundary1234
+
+------FormBoundary1234
+Content-Disposition: form-data; name="file"; filename="input.jpg"
+Content-Type: image/jpeg
+
+< ./input.jpg
+
+------FormBoundary1234
+
+### GET - wylogowanie
+GET http://localhost:3000/api/logout HTTP/1.1
+authorization: Bearer <token>
